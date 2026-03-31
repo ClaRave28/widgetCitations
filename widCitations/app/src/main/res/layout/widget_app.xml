@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:id="@+id/widget_layout" xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1a73e8"
+    android:background="#9C27B0"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp">
@@ -11,17 +11,16 @@
         android:id="@+id/widget_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mon Widget"
-        android:textColor="#ffffff"
+        android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/widget_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bonjour !"
-        android:textColor="#ffffff"
+        android:textColor="@color/black"
         android:textSize="14sp" />
 
 </LinearLayout>

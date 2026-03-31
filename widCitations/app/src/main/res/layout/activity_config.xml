@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp" >
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/personnaliser_le_widget"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="32dp"/>
+
+    <!--Couleur du fond-->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/couleur_de_fond"
+    android:textSize="16sp"
+    android:layout_marginBottom="8dp" />
+
+<EditText
+
+
+    android:id="@+id/input_bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="#000000"
+    android:layout_marginBottom="24dp"
+ />
+
+    <!--Couleur du titre-->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/couleur_du_titre"
+    android:textSize="16sp"
+    android:layout_marginBottom="8dp" />
+
+<EditText
+
+
+    android:id="@+id/input_title_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="#000000"
+    android:layout_marginBottom="24dp" />
+
+    <!--Couleur du texte-->
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/couleur_du_texte"
+    android:textSize="16sp"
+    android:layout_marginBottom="8dp" />
+
+<EditText
+
+
+    android:id="@+id/input_text_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="#000000"
+    android:layout_marginBottom="32dp" />
+
+    <!--Bouton-->
+<Button
+
+    android:id="@+id/btn_save"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/enregistrer" />
+
+    </LinearLayout>

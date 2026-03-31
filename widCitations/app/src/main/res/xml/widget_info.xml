@@ -9,6 +9,7 @@
     android:initialLayout="@layout/widget_app"
 
     android:resizeMode="horizontal|vertical"
-    android:widgetCategory="home_screen">
+    android:widgetCategory="home_screen"
+    android:configure="fr.clarisse.widcitations.ConfigActivity">
 
 </appwidget-provider>
