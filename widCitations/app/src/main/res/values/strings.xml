@@ -2,8 +2,8 @@
     <string name="app_name">widCitations</string>
     <string name="couleur_de_fond">Couleur de fond</string>
     <string name="personnaliser_le_widget">Personnaliser le widget</string>
-    <string name="couleur_du_texte">Couleur du texte</string>
+    <string name="couleur_du_quote">Couleur du quote</string>
     <string name="_000000">#000000</string>
     <string name="enregistrer">Enregistrer</string>
-    <string name="couleur_du_titre">Couleur du titre</string>
+    <string name="couleur_de_auteur">Couleur auteur</string>
 </resources>

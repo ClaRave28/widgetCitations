@@ -37,7 +37,7 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/couleur_du_titre"
+    android:text="Couleur du quote"
     android:textSize="16sp"
     android:layout_marginBottom="8dp" />
 
@@ -54,7 +54,7 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="@string/couleur_du_texte"
+    android:text="Couleur de l'auteur"
     android:textSize="16sp"
     android:layout_marginBottom="8dp" />
 
