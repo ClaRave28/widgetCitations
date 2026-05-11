@@ -93,3 +93,101 @@ The API will be available at `http://localhost:8080`.
 | Android Widget | API Response |
 |:-:|:-:|
 | *(screenshot coming soon)* | *(screenshot coming soon)* | -->
+
+---
+
+# widgetCitations
+
+## Table des matières
+1. [Introduction](#1-introduction)
+2. [Technologies utilisées](#2-technologies-utilisées)
+3. [Architecture](#3-architecture)
+4. [Liste des fonctionnalités](#4-liste-des-fonctionnalités)
+5. [Comment lancer le projet ?](#5-comment-lancer-le-projet-)
+<!-- 6. [Aperçu](#6-aperçu) -->
+
+---
+
+## 1. Introduction
+
+**widgetCitations** est un projet full-stack Android composé de deux modules :
+
+- **`citations-api`** — une API REST Spring Boot qui sert des citations aléatoires stockées dans une base de données PostgreSQL
+- **`widCitations`** — un widget Android affiché sur l'écran d'accueil, qui récupère et affiche une citation depuis l'API
+
+---
+
+## 2. Technologies utilisées
+
+**Backend (`citations-api`)**
+- **Java** — langage principal
+- **Spring Boot** — framework REST API
+- **Spring Data JPA** — accès à la base de données
+- **PostgreSQL** — stockage des citations
+- **Docker / Docker Compose** — base de données conteneurisée
+
+**Frontend (`widCitations`)**
+- **Java** — développement Android
+- **Android SDK** — système de widget (`AppWidgetProvider`)
+- **Client HTTP** — appels à l'API depuis le widget
+
+---
+
+## 3. Architecture
+
+```
+widgetCitations/
+├── citations-api/        # API REST Spring Boot
+│   └── ...               # Controllers, Services, Repositories, Entités
+└── widCitations/         # Application Android
+    └── ...               # Widget provider, layout, manifest
+```
+
+Le widget Android interroge l'API REST à intervalle régulier pour récupérer une citation aléatoire et l'afficher sur l'écran d'accueil.
+
+---
+
+## 4. Liste des fonctionnalités
+
+- Endpoint REST renvoyant une citation aléatoire depuis la base de données
+- Base de données PostgreSQL gérée via Docker
+- Widget Android affichant la citation récupérée sur l'écran d'accueil
+- Rafraîchissement automatique du widget à intervalle défini
+- Architecture en couches propre côté backend (Controller → Service → Repository)
+
+---
+
+## 5. Comment lancer le projet ?
+
+### Backend — `citations-api`
+
+**Prérequis :** Java 17+, Maven, Docker
+
+```bash
+cd citations-api
+
+# Démarrer la base de données PostgreSQL
+docker-compose up -d
+
+# Lancer l'API Spring Boot
+./mvnw spring-boot:run
+```
+
+L'API sera disponible à l'adresse `http://localhost:8080`.
+
+### Frontend — `widCitations`
+
+**Prérequis :** Android Studio, Android SDK
+
+1. Ouvrir le dossier `widCitations` dans **Android Studio**
+2. Mettre à jour l'URL de base de l'API si nécessaire (utiliser l'IP locale de la machine pour un test sur appareil physique)
+3. Lancer l'application sur un émulateur ou un appareil physique
+4. Ajouter le widget sur l'écran d'accueil
+
+---
+
+<!-- ## 6. Aperçu
+
+| Widget Android | Réponse de l'API |
+|:-:|:-:|
+| *(screenshot à venir)* | *(screenshot à venir)* | -->
